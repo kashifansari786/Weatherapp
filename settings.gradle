@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+//    buildscript {
+//        dependencies {
+//            classpath 'androidx.navigation:navigation-safe-args-gradle-plugin:2.4.2'
+//        }
+//    }
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "Weather Locus"
+include ':app'

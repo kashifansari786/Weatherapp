@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/SearchCityFragment">
+
+    <fragment
+        android:id="@+id/SearchCityFragment"
+        android:name="com.strawnetwork.weatherlocus.fragments.SearchCityFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/search_city_layout" >
+        <action
+            android:id="@+id/action_SearchCityFragment_to_listLayout"
+            app:destination="@id/listLayout" />
+    </fragment>
+    <fragment android:id="@+id/listLayout"
+        android:name="com.strawnetwork.weatherlocus.fragments.ListFragment"
+        tools:layout="@layout/list_layout">
+
+        <action
+            android:id="@+id/action_listLayout_to_fullDetailLayout"
+            app:destination="@id/fullDetailLayout" />
+        <action
+            android:id="@+id/action_listLayout_to_deatil"
+            app:destination="@id/detailLayout" />
+        <argument
+            android:name="DataList"
+            app:argType="com.strawnetwork.weatherlocus.models.MainListData" />
+    </fragment>
+    <fragment android:id="@+id/fullDetailLayout"
+        android:name="com.strawnetwork.weatherlocus.fragments.FullDetailFragment"
+        tools:layout="@layout/full_detail_layout"/>
+    <fragment android:id="@+id/detailLayout"
+        android:name="com.strawnetwork.weatherlocus.fragments.DetailFragment"
+        tools:layout="@layout/detail_layout">
+        <argument
+            android:name="listData"
+            app:argType="com.strawnetwork.weatherlocus.models.ListData" />
+        <argument
+            android:name="clouddata"
+            app:argType="com.strawnetwork.weatherlocus.models.City" />
+    </fragment>
+
+</navigation>

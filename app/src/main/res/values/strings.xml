@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Weather Locus</string>
+    <string name="search_for_anything">Enter the city name...</string>
+    <string name="speak_voice">voice</string>
+</resources>
